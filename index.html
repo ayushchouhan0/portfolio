@@ -885,6 +885,20 @@
                         <span class="tech-tag">Classification</span>
                     </div>
                 </div>
+
+                <div class="project-card" onclick="showProject('mental-health-chatbot')">
+                    <h3>Mental Health Assessment Chatbot</h3>
+                    <p>RAG-based conversational AI system for mental health support with audio assessment capabilities using Groq LLM and FAISS vector store. Provides intelligent mental health evaluations and personalized therapeutic recommendations.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Groq LLM</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">HuggingFace</span>
+                        <span class="tech-tag">Whisper ASR</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">Audio Processing</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1060,7 +1074,33 @@
                 liveLink: 'https://course-recommender-frontend.onrender.com',
                 githubLink: 'https://github.com/ayushchouhan0/course-recommendation',
                 tech: ['Scikit-Learn', 'Pandas', 'NumPy', 'Machine Learning', 'Clustering', 'Data Analysis', 'Feature Engineering']
-            }
+            },
+            'mental-health-chatbot': {
+                title: 'Mental Health Assessment Chatbot',
+                description: `
+                    <h2>Project Overview</h2>
+                    <p>Developed an intelligent RAG-based conversational AI system that provides mental health support and conducts comprehensive assessments with audio response capabilities. The system combines contextual chatbot interactions with structured mental health evaluations to deliver personalized insights and support recommendations.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>RAG-Powered Conversations:</strong> Contextual responses using pre-built mental health knowledge base</li>
+                        <li><strong>Intelligent Assessment Triggers:</strong> Automatic mental health evaluation suggestions after meaningful interactions</li>
+                        <li><strong>Audio Response Processing:</strong> Real-time speech-to-text conversion for assessment answers</li>
+                        <li><strong>Comprehensive Report Generation:</strong> AI-generated insights combining chat history and assessment data</li>
+                        <li><strong>Session Management:</strong> Maintains conversation context and user interaction history</li>
+                        <li><strong>RESTful API Architecture:</strong> Clean, documented endpoints for seamless integration</li>
+                        <li><strong>Multi-modal Interaction:</strong> Supports both text and audio input for accessibility</li>
+                    </ul>
+                    
+                    <h2>Technical Implementation</h2>
+                    <p>Built using FastAPI framework with Groq Llama-3.3-70b-versatile for natural language processing and HuggingFace sentence-transformers for embeddings. Implemented FAISS vector store for efficient similarity search and Groq Whisper-large-v3 for audio processing. The system processes 7-question structured assessments with real-time audio transcription and generates detailed mental health reports using advanced prompt engineering.</p>
+                    
+                    <h2>Business Impact & ROI</h2>
+                    <p>The mental health chatbot system provides 24/7 accessible mental health support with personalized assessments and recommendations. The solution enables healthcare providers to conduct preliminary screenings efficiently while maintaining conversation context for meaningful therapeutic interactions. Currently supports multiple concurrent users with real-time processing capabilities.</p>
+                `,
+                liveLink: 'https://mental-health-frontend-zjzt.onrender.com',
+                githubLink: 'https://github.com/ayushchouhan0/Mental-Health-Assessment-Assistant',
+                tech: ['FastAPI', 'Groq LLM', 'FAISS', 'HuggingFace Transformers', 'Whisper ASR', 'RAG', 'Audio Processing', 'REST API']}
         };
 
         // Particle system
