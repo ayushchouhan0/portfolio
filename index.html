@@ -1019,7 +1019,8 @@
                     <p>This project significantly improved student engagement and provided 24/7 automated counseling support, reducing response time from hours to seconds while maintaining high accuracy in course recommendations. The system handles over 1000+ queries daily with 95% satisfaction rate.</p>
                     <p>Note : The deployed functional version of the project is a RAG based chatbot which supports user uploaded documents only to be used for context retrival.</p>
                 `,
-                liveLink: 'https://chatbot-frontend-74w5.onrender.com',
+                liveFrontend: 'https://chatbot-frontend-74w5.onrender.com',
+                liveBackend: 'https://chatbot-backend-m9su.onrender.com',
                 githubLink: 'https://github.com/ayushchouhan0/chatbot-assistant/tree/main',
                 tech: ['LangChain', 'FAISS', 'GCP', 'FastAPI', 'OpenAI', 'Hugging Face', 'Python', 'RAG']
             },
@@ -1045,7 +1046,8 @@
                     <h2>Performance Metrics</h2>
                     <p>Achieves real-time processing at 30 FPS with sub-second response time for alert generation. The system successfully tracks individuals with 97.8% accuracy across multiple entry/exit points and generates actionable insights for security personnel.</p>
                 `,
-                liveLink: '#',
+                liveFrontend: '#',
+                liveBackend: '#',
                 githubLink: '#',
                 tech: ['YOLO', 'ResNet-50', 'OpenCV', 'FFmpeg', 'Python', 'Computer Vision', 'Real-time Processing']
             },
@@ -1071,7 +1073,8 @@
                     <h2>Business Impact & ROI</h2>
                     <p>The segmentation and recommender engine improved course enrollment rates through personalized recommendations and increased marketing campaign effectiveness. The system now processes 500+ customer profiles monthly, helps counsellors for product pitching.</p>
                 `,
-                liveLink: 'https://course-recommender-frontend.onrender.com',
+                liveFrontend: 'https://course-recommender-frontend.onrender.com',
+                liveBackend: 'https://course-recommender-backend-yrfa.onrender.com',
                 githubLink: 'https://github.com/ayushchouhan0/course-recommendation',
                 tech: ['Scikit-Learn', 'Pandas', 'NumPy', 'Machine Learning', 'Clustering', 'Data Analysis', 'Feature Engineering']
             },
@@ -1098,7 +1101,8 @@
                     <h2>Business Impact & ROI</h2>
                     <p>The mental health chatbot system provides 24/7 accessible mental health support with personalized assessments and recommendations. The solution enables healthcare providers to conduct preliminary screenings efficiently while maintaining conversation context for meaningful therapeutic interactions. Currently supports multiple concurrent users with real-time processing capabilities.</p>
                 `,
-                liveLink: 'https://mental-health-frontend-zjzt.onrender.com',
+                liveFrontend: 'https://mental-health-frontend-zjzt.onrender.com',
+                liveBackend: 'https://mental-health-backend-08bz.onrender.com',
                 githubLink: 'https://github.com/ayushchouhan0/Mental-Health-Assessment-Assistant',
                 tech: ['FastAPI', 'Groq LLM', 'FAISS', 'HuggingFace Transformers', 'Whisper ASR', 'RAG', 'Audio Processing', 'REST API']}
         };
@@ -1159,7 +1163,8 @@
                         ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                     </div>
                     <div class="project-links">
-                        <a href="${project.liveLink}" class="btn btn-primary" target="_blank">Live Demo</a>
+                        <a href="${project.liveFrontend}" class="btn btn-primary" target="_blank">Live Frontend</a>
+                        <a href="${project.liveBackend}" class="btn btn-primary" target="_blank">Invoke Backend</a>
                         <a href="${project.githubLink}" class="btn btn-secondary" target="_blank">View Code</a>
                     </div>
                 </div>
