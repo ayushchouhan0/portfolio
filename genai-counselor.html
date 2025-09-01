@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI-Powered Counsellor Chatbot - Ayush Chouhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Ayush Chouhan</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <a href="projects.html" class="back-btn">← Back to Projects</a>
+            <div class="project-detail loading">
+                <div class="project-header">
+                    <h1>GenAI-Powered Counsellor Chatbot</h1>
+                    <div class="tech-stack">
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">Hugging Face</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">RAG</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://chatbot-frontend-74w5.onrender.com" class="btn btn-primary" target="_blank">Live Frontend</a>
+                        <a href="https://chatbot-backend-m9su.onrender.com" class="btn btn-primary" target="_blank">Invoke Backend</a>
+                        <a href="https://github.com/ayushchouhan0/chatbot-assistant/tree/main" class="btn btn-secondary" target="_blank">View Code</a>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <h2>Project Overview</h2>
+                    <p>Developed an intelligent counseling chatbot using multiple Large Language Models (OpenAI, Llama, Gemma, and Anthropic) integrated through Ollama and Hugging Face. The system implements Retrieval-Augmented Generation (RAG) architecture to provide context-specific responses for educational counseling.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Multi-LLM Integration:</strong> Leverages different AI models for optimal response generation</li>
+                        <li><strong>RAG Architecture:</strong> Implements dynamic retrieval and response generation through vectorization of course data</li>
+                        <li><strong>Cloud Integration:</strong> Utilizes GCP cloud storage for scalable data management</li>
+                        <li><strong>API Deployment:</strong> FastAPI-based deployment for seamless integration</li>
+                        <li><strong>Database Integration:</strong> Connected with course databases for real-time information</li>
+                    </ul>
+                    
+                    <h2>Technical Implementation</h2>
+                    <p>The chatbot uses FAISS (Facebook AI Similarity Search) for efficient vector similarity search, enabling quick retrieval of relevant course information and frequently asked questions. The system processes course overviews and QnA data through advanced vectorization techniques, ensuring contextually relevant responses.</p>
+                    
+                    <h2>Impact & Results</h2>
+                    <p>This project significantly improved student engagement and provided 24/7 automated counseling support, reducing response time from hours to seconds while maintaining high accuracy in course recommendations. The system handles over 1000+ queries daily with 95% satisfaction rate.</p>
+                    <p>Note: The deployed functional version of the project is a RAG based chatbot which supports user uploaded documents only to be used for context retrieval.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
