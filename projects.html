@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ayush Chouhan | Data Scientist Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Ayush Chouhan</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header loading">
+                <h1>Featured Projects</h1>
+                <p>Innovative AI solutions that drive real-world impact and business value</p>
+            </div>
+            <div class="projects-grid loading">
+                <a href="project-genai-counselor.html" class="project-card">
+                    <h3>GenAI-Powered Counsellor Chatbot</h3>
+                    <p>An intelligent counseling chatbot built with multiple LLMs using RAG architecture for context-specific responses. Integrates OpenAI, Llama, Gemma, and Anthropic models for optimal performance.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">Hugging Face</span>
+                    </div>
+                </a>
+
+                <a href="project-intelligent-surveillance.html" class="project-card">
+                    <h3>Intelligent Surveillance System</h3>
+                    <p>Real-time movement detection and identity recognition system using advanced computer vision. Features YOLO object detection and ResNet-50 for person re-identification across multiple camera feeds.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">YOLO</span>
+                        <span class="tech-tag">ResNet-50</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">FFmpeg</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </a>
+
+                <a href="project-student-segmentation.html" class="project-card">
+                    <h3>Student Segmentation and Course Recommender Engine</h3>
+                    <p>Machine learning model for intelligent customer clustering and Product Recommendation using Agglomerative Hierarchical Clustering and Random Forest Classifier. Enables targeted course recommendations and personalized marketing strategies.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">EDA</span>
+                        <span class="tech-tag">Clustering</span>
+                        <span class="tech-tag">Classification</span>
+                    </div>
+                </a>
+
+                <a href="project-mental-health-chatbot.html" class="project-card">
+                    <h3>Mental Health Assessment Chatbot</h3>
+                    <p>RAG-based conversational AI system for mental health support with audio assessment capabilities using Groq LLM and FAISS vector store. Provides intelligent mental health evaluations and personalized therapeutic recommendations.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Groq LLM</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">HuggingFace</span>
+                        <span class="tech-tag">Whisper ASR</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">Audio Processing</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
