@@ -258,7 +258,7 @@ nav.scrolled {
     background-clip: text;
     letter-spacing: -0.03em;
     background-size: 200% 200%;
-    animation: gradientShift 3s ease-in-out infinite;
+    animation: gradientShift 4s cubic-bezier(0.4, 0.0, 0.6, 1) infinite;
 }
 
 .intro h2 {
