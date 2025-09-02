@@ -6,7 +6,7 @@
     --card-bg: rgba(255, 255, 255, 0.03);
     --text-primary: #ffffff;
     --text-secondary: #b8c2d9;
-    --text-accent: #64ffda;
+    --text-accent: linear-gradient(135deg, #64ffda 0%, #87ceeb 100%);
     --border-color: rgba(255, 255, 255, 0.08);
     --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.12);
     --shadow-medium: 0 16px 64px rgba(0, 0, 0, 0.24);
@@ -794,4 +794,15 @@ nav.scrolled {
 .loaded {
     opacity: 1;
     transform: translateY(0);
+}
+/* Force color changes - Add at the very end */
+.logo,
+.intro h1,
+.section-header h1,
+.project-header h1 {
+    background: linear-gradient(135deg, #64ffda 0%, #b0e0e6 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
 }
