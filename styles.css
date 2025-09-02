@@ -6,7 +6,7 @@
     --card-bg: rgba(255, 255, 255, 0.03);
     --text-primary: #ffffff;
     --text-secondary: #b8c2d9;
-    --text-accent: linear-gradient(135deg, #64ffda 0%, #87ceeb 100%);
+    --text-accent: linear-gradient(135deg, #64ffda 0%, #00b3ff 100%);
     --border-color: rgba(255, 255, 255, 0.08);
     --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.12);
     --shadow-medium: 0 16px 64px rgba(0, 0, 0, 0.24);
