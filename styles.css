@@ -39,76 +39,76 @@ body {
     height: 100%;
     z-index: -2;
     opacity: 1;
+    overflow: hidden; /* Prevent elements from going outside bounds */
 }
 
 .bg-animation::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -10%; /* Extend beyond viewport to prevent gaps */
+    left: -10%;
+    width: 120%; /* Make larger to cover movement */
+    height: 120%;
     background: 
-        radial-gradient(ellipse at top left, rgba(79, 172, 254, 0.4) 0%, transparent 50%),
-        radial-gradient(ellipse at bottom right, rgba(0, 242, 254, 0.4) 0%, transparent 50%),
-        radial-gradient(ellipse at center, rgba(79, 172, 254, 0.3) 0%, transparent 50%);
-    animation: backgroundShift 15s ease-in-out infinite;
+        radial-gradient(ellipse at top left, rgba(79, 172, 254, 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom right, rgba(0, 242, 254, 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at center, rgba(79, 172, 254, 0.2) 0%, transparent 70%);
+    animation: backgroundShiftSmooth 20s ease-in-out infinite;
 }
 
 .bg-animation::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
     background: 
-        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-        radial-gradient(circle at 75% 75%, rgba(79, 172, 254, 0.1) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.08) 1px, transparent 1px);
-    background-size: 40px 40px, 60px 60px, 80px 80px;
-    animation: grain 8s steps(10) infinite, drift 20s linear infinite;
-    opacity: 0.6;
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(79, 172, 254, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px, 120px 120px;
+    animation: grainSmooth 12s linear infinite, driftSmooth 30s linear infinite;
+    opacity: 0.4;
 }
 
-@keyframes backgroundShift {
+/* Smoother background animation without abrupt movements */
+@keyframes backgroundShiftSmooth {
     0%, 100% { 
-        transform: translateX(0) translateY(0) scale(1);
-        opacity: 1;
-    }
-    25% { 
-        transform: translateX(-40px) translateY(-30px) scale(1.1);
+        transform: translate(0, 0) scale(1);
         opacity: 0.8;
     }
-    50% { 
-        transform: translateX(30px) translateY(40px) scale(0.9);
-        opacity: 0.6;
-    }
-    75% { 
-        transform: translateX(-20px) translateY(20px) scale(1.05);
+    25% { 
+        transform: translate(-20px, -15px) scale(1.02);
         opacity: 0.9;
     }
+    50% { 
+        transform: translate(15px, 20px) scale(0.98);
+        opacity: 0.7;
+    }
+    75% { 
+        transform: translate(-10px, 10px) scale(1.01);
+        opacity: 0.85;
+    }
 }
 
-@keyframes grain {
+/* Smoother grain animation */
+@keyframes grainSmooth {
     0%, 100% { transform: translate(0, 0); }
-    10% { transform: translate(-2px, -2px); }
-    20% { transform: translate(2px, -3px); }
-    30% { transform: translate(-3px, 2px); }
-    40% { transform: translate(3px, 3px); }
-    50% { transform: translate(-2px, 3px); }
-    60% { transform: translate(3px, -2px); }
-    70% { transform: translate(-3px, -3px); }
-    80% { transform: translate(2px, 2px); }
-    90% { transform: translate(-2px, 3px); }
+    25% { transform: translate(-1px, -1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, 1px); }
 }
 
-@keyframes drift {
+/* Smoother drift animation */
+@keyframes driftSmooth {
     0% { background-position: 0% 0%, 0% 0%, 0% 0%; }
-    100% { background-position: 100% 100%, -100% -100%, 50% -50%; }
+    33% { background-position: 30% 30%, -30% -30%, 15% -15%; }
+    66% { background-position: -30% 60%, 60% -60%, -15% 30%; }
+    100% { background-position: 0% 0%, 0% 0%, 0% 0%; }
 }
 
-/* Floating particles */
+/* Improved floating particles without overflow issues */
 .particles {
     position: fixed;
     top: 0;
@@ -117,37 +117,44 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: -1;
+    overflow: hidden; /* Prevent particles from showing outside viewport */
 }
 
 .particle {
     position: absolute;
-    width: 7px;
-    height: 7px;
-    background: var(--accent-gradient);
+    width: 4px; /* Reduced size */
+    height: 4px;
+    background: rgba(79, 172, 254, 0.6); /* Reduced opacity */
     border-radius: 50%;
-    opacity: 0.8;
-    animation: float 15s infinite linear;
+    opacity: 0;
+    animation: floatSmooth 20s infinite linear;
 }
 
-@keyframes float {
+/* Smoother particle animation */
+@keyframes floatSmooth {
     0% {
-        transform: translateY(100vh) scale(0);
+        transform: translateY(100vh) translateX(0) scale(0);
         opacity: 0;
     }
-    10% {
-        opacity: 0.6;
-        transform: scale(1);
+    5% {
+        opacity: 0.4;
+        transform: translateY(95vh) translateX(0) scale(1);
     }
-    90% {
+    50% {
         opacity: 0.6;
+        transform: translateY(50vh) translateX(10px) scale(1);
+    }
+    95% {
+        opacity: 0.4;
+        transform: translateY(5vh) translateX(-5px) scale(1);
     }
     100% {
-        transform: translateY(-10vh) scale(0);
+        transform: translateY(-5vh) translateX(0) scale(0);
         opacity: 0;
     }
 }
 
-/* Navigation */
+/* Fix for navigation to ensure no overflow elements appear above */
 nav {
     position: fixed;
     top: 0;
@@ -155,14 +162,15 @@ nav {
     background: transparent;
     border-bottom: none;
     z-index: 1000;
-    padding: 0.5rem 0; /* Reduced from 1rem to 0.5rem */
+    padding: 0.5rem 0;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden; /* Prevent any overflow elements */
 }
 
 nav.scrolled {
-    background: transparent; /* Keep transparent even when scrolled */
-    box-shadow: none; /* Remove shadow */
-    border-bottom: none; /* Remove border */
+    background: transparent;
+    box-shadow: none;
+    border-bottom: none;
 }
 
 .nav-container {
@@ -172,6 +180,33 @@ nav.scrolled {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: relative; /* Ensure proper stacking context */
+}
+
+/* Ensure body doesn't show any overflow elements */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative; /* Create stacking context */
+}
+
+/* Fix for any potential pseudo-elements causing issues */
+body::before,
+body::after {
+    display: none;
+}
+
+/* Ensure main content has proper z-index */
+.section {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 120px 2rem 4rem;
 }
 
 .logo {
