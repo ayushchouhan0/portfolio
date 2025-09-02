@@ -795,14 +795,3 @@ nav.scrolled {
     opacity: 1;
     transform: translateY(0);
 }
-/* Force color changes - Add at the very end */
-.logo,
-.intro h1,
-.section-header h1,
-.project-header h1 {
-    background: linear-gradient(135deg, #64ffda 0%, #b0e0e6 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    color: transparent !important;
-}
